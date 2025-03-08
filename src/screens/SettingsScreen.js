@@ -272,7 +272,7 @@ export default function SettingsScreen() {
           <View style={styles.sectionContent}>
             <View style={styles.aboutContent}>
               <View style={styles.appInfo}>
-                <Text style={[styles.appName, { color: theme.colors.text }]}>NullPointer</Text>
+                <Text style={[styles.appName, { color: theme.colors.text }]}>GymApp</Text>
                 <Text style={[styles.version, { color: theme.colors.textSecondary }]}>Versión 1.0.0</Text>
               </View>
               
@@ -297,7 +297,7 @@ export default function SettingsScreen() {
               <View style={[styles.divider, { backgroundColor: theme.colors.border }]} />
               
               <Text style={[styles.copyright, { color: theme.colors.textSecondary }]}>
-                © 2025 NullPointer. Todos los derechos reservados.
+                © 2025 GymApp. Todos los derechos reservados.
               </Text>
             </View>
           </View>

@@ -585,7 +585,7 @@ export default function HomeScreen({ navigation }) {
             onError={(error) => console.log('Error loading image:', error)}
           />
         </TouchableOpacity>
-        <Text style={styles.appTitle}>NullPointer Gym</Text>
+        <Text style={styles.appTitle}>GymApp</Text>
         <TouchableOpacity
           style={styles.notificationButton}
           onPress={() => Alert.alert('Próximamente', 'Las notificaciones estarán disponibles en futuras actualizaciones.')}

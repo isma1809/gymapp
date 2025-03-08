@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "nullPointer",
-    "slug": "nullPointer",
+    "name": "GymApp",
+    "slug": "GymApp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -14,7 +14,7 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.nullpointer.app",
+      "bundleIdentifier": "com.gymapp.app",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
       }
@@ -24,7 +24,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.nullpointer.app"
+      "package": "com.gymapp.app"
     },
     "web": {
       "favicon": "./assets/favicon.png"

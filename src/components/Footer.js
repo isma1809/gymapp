@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <View style={styles.footer}>
       <Text style={[styles.footerText, { color: theme.colors.textSecondary }]}>
-        Una creación de NullPointer
+        Una creación de GymApp
       </Text>
     </View>
   );
