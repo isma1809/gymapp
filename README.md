@@ -58,6 +58,40 @@ La aplicación permite personalizar:
 - 📊 Unidades de medida
 - 🔐 Preferencias de privacidad
 
+## 🔒 Privacidad y Desactivación de Telemetría
+
+GymApp respeta tu privacidad. Para desactivar toda la telemetría y recopilación de datos analíticos, hemos incluido un script dedicado:
+
+```bash
+# Desactivar toda la telemetría y analítica
+npm run disable-telemetry
+```
+
+### ¿Qué hace el script?
+
+El script `disable-telemetry.js` realiza las siguientes acciones:
+
+1. **Configuración a nivel de proyecto**:
+   - Desactiva la telemetría en la configuración local de Expo
+   - Crea variables de entorno para prevenir la recopilación de datos
+
+2. **Configuración a nivel global**:
+   - Modifica la configuración global de Expo en tu sistema
+   - Desactiva la telemetría para todas las herramientas de Expo
+
+3. **Configuración de npm**:
+   - Desactiva notificaciones y mensajes promocionales
+   - Previene auditorías automáticas que envían datos
+
+### ¿Cuándo ejecutar el script?
+
+- Al iniciar un nuevo proyecto
+- Después de actualizar Expo
+- Al clonar el repositorio en una nueva máquina
+- Si sospechas que la telemetría se ha reactivado
+
+En general, solo necesitas ejecutarlo **una vez por proyecto y por máquina**.
+
 ## 👨‍💻 Desarrollo
 
 ```bash

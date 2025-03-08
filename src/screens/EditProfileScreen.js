@@ -39,9 +39,14 @@ export default function EditProfileScreen({ navigation }) {
   }, []);
 
   const requestPermissions = async () => {
-    const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
-    if (status !== 'granted') {
-      Alert.alert('Permiso denegado', 'Necesitamos acceso a tu galería para cambiar la foto de perfil');
+    try {
+      const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
+      if (status !== 'granted') {
+        Alert.alert('Permiso denegado', 'Necesitamos acceso a tu galería para cambiar la foto de perfil');
+      }
+    } catch (error) {
+      console.error('Error al solicitar permisos:', error);
+      Alert.alert('Error de permisos', 'No se pudieron solicitar los permisos necesarios');
     }
   };
 
@@ -65,8 +70,8 @@ export default function EditProfileScreen({ navigation }) {
 
   const handleImagePick = async () => {
     try {
+      // Simplificar al máximo la llamada a la API
       const result = await ImagePicker.launchImageLibraryAsync({
-        mediaTypes: ImagePicker.MediaTypeOptions.Images,
         allowsEditing: true,
         aspect: [1, 1],
         quality: 0.5,
@@ -88,18 +93,21 @@ export default function EditProfileScreen({ navigation }) {
         // Copiar la imagen al directorio de la app
         await FileSystem.copyAsync({
           from: selectedImage.uri,
-          to: newFilePath
+          to: newFilePath,
         });
 
-        // Actualizar el estado con la nueva imagen
-        setUserData(prev => ({
-          ...prev,
-          imageUri: newFilePath
-        }));
+        // Actualizar estado con la nueva imagen
+        setUserData({
+          ...userData,
+          imageUri: newFilePath,
+        });
       }
     } catch (error) {
-      console.error('Error al seleccionar imagen:', error);
-      Alert.alert('Error', 'No se pudo seleccionar la imagen');
+      console.error('Error completo al seleccionar imagen:', error);
+      Alert.alert(
+        'Error al seleccionar imagen',
+        `Ha ocurrido un error: ${error.message || error}`
+      );
     }
   };
 

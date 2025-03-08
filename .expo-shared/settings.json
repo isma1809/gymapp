@@ -1,0 +1,7 @@
+{
+  "devClient": false,
+  "strictMode": false,
+  "telemetry": {
+    "enabled": false
+  }
+}

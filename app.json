@@ -37,6 +37,13 @@
     "owner": "isma1809",
     "plugins": [
       "expo-sqlite"
-    ]
+    ],
+    "privacy": "unlisted",
+    "updates": {
+      "enabled": false
+    },
+    "telemetry": {
+      "enabled": false
+    }
   }
 }
